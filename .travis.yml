@@ -15,9 +15,16 @@ before_script:
     - bin/composer install --prefer-source
     - git config --global user.name travis-ci
     - git config --global user.email travis@example.com
-build_image: shippable/minv2:beta 
+
 script:
     - ls -d tests/Composer/Test/* | parallel --gnu --keep-order 'echo "Running {} tests"; ./vendor/bin/phpunit -c tests/complete.phpunit.xml {};'
 
 git:
   depth: 5
+
+notifications:
+ irc:
+  pull_requests: true
+  channels:
+    - "chat.freenode.net#test-irc"
+    - "chat.freenode.net#testing2"
