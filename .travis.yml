@@ -24,7 +24,7 @@ git:
 
 notifications:
  irc:
-  pull_requests: true
+  pull_requests: false
   channels:
     - "chat.freenode.net#test-irc"
     - "chat.freenode.net#testing2"
