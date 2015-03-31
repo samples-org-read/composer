@@ -23,6 +23,7 @@ git:
   depth: 5
 
 notifications:
+ email: vidya@shippable.com
  irc:
   pull_requests: true
   channels:
